@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+	<title> Post It </title> 
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<script type="text/javascript" src="js/dragdrop.js"></script>
+	<script type="text/javascript" src="js/localstorage.js"></script>
+</head>
+
+
+<body style="margin-left: 100px; margin-top: 50px"  onload="loading();" onunload="save();">
+
+<header>
+	<nav>
+		<a href="postit.html"><img src="src/gohome.png" id="toindex"></a>
+		<input type="image" src="src/note_s.png" alt="add note" id="newMemo" draggable = "true" ondrag="drag(event)" ondragstart="dragstart(event)" readonly/>
+		<img id="deleteMemo" src="src/can_s.png"  ondragover="allowdrop(event,id)" ondrop="drop(event)" />
+	</nav>
+</header>
+
+<article>
+	  <section id="droptarget"  ondragover="allowdrop(event)" ondrop="drop(event,id)" ondragend="dragend()">
+	  </section>
+</article>
+</body>
+</html>
